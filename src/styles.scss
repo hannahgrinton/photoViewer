@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import "_globals";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+
+.loading-overlay {
+    position: fixed;
+    z-index: 999;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    overflow: show;
+    margin: auto;
+    background-color: $light-grey;
+    display: block;
+}
+.noImages-overlay {
+    position: fixed;
+    z-index: 999;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    overflow: show;
+    margin: auto;
+    background-color: $light-grey;
+    display: none;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    &__header {
+        font-family: $font-text;
+        font-weight: bold;
+        font-size: 24px;
+        color: $rose-mauve;
+        align-self: center;
+        //display: none;
+    }
+}

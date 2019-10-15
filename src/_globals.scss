@@ -1,0 +1,52 @@
+//------------------------------------------------- variables
+$rose-mauve: rgba(232, 116, 139, 1);
+$pale-rose: rgb(253, 180, 194);
+$white: #FFFFFF;
+$light-grey: rgb(240, 240, 240);
+$dark-grey: rgb(129, 127, 127);
+$font: 'Raleway', sans-serif;
+$font-text: 'Roboto Condensed', sans-serif;
+//------------------------------------------------- mixins
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($args) {
+    -webkit-box-flex: $args;
+    -webkit-flex: $args;
+    -ms-flex: $args;
+    flex: $args; 
+}
+
+@mixin link-styles() {
+    color: $rose-mauve;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: $pale-rose;
+    }
+    &:visited {
+        color: $pale-rose;
+        text-decoration: none;
+    }
+}
+@mixin title-style() {
+    background: -webkit-linear-gradient($rose-mauve, $pale-rose);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+}
+@mixin button-style() {
+    border:0;
+    padding: 0;
+    background-color: $white;
+    cursor: pointer;
+    &:focus {
+        outline: 0;
+    }
+}

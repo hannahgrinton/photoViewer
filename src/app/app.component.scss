@@ -1,0 +1,342 @@
+@import "./../_globals";
+
+//------------------------------------------------- navigation and titles
+.navbar {
+    @include display-flex();
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding: 20px 20px 20px 40px;
+    background-color: $light-grey;
+    &__text {
+        color: $dark-grey;
+        padding: 0;
+        margin: 0;
+        align-self: center;
+    }
+    &__link {
+        @include link-styles();
+    }
+    &__header {
+        padding: 0;
+        margin: 0;
+        @include title-style();
+        i {@include title-style();}
+    }
+}
+.imageTitle {
+    padding: 20px 20px 20px 40px;
+    font-family: $font-text;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+}
+//------------------------------------------------- image and side panels
+.mainSection {
+    @include display-flex();
+    flex-flow: row wrap;
+    width: 100%;
+    &__image {
+        margin-left: 40px;
+        //margin-right: 100px;
+        max-width: 100%;
+        height: 450px;
+        border-radius: 5px;
+    }
+    &__buttons {
+        @include display-flex();
+        flex-flow: column wrap;
+        align-items: flex-start;
+        button {
+            @include button-style();
+            height: 24px;
+            margin: 0px 0px 10px 10px;
+            i {
+                font-size: 24px;
+                color: $rose-mauve;
+                &:hover {
+                    color: $pale-rose;
+                }
+            }
+        }
+    }
+    
+}
+.popUpBox {
+    width: 500px;
+    height: 165px;
+    border-radius: 5px;
+    background-color: $light-grey;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    @include display-flex();
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    &__img {
+        display: none;
+        margin: 10px;
+        height: 60px;
+        width:60px;
+        padding: 0;
+        border-radius: 5px;
+        &:hover {
+            border: 2px solid $rose-mauve;
+            margin: 8px;
+            cursor: pointer;
+        }
+    }
+    .noHover {
+        pointer-events: none;
+    }
+    &__author {
+        width: 500px;
+        height: 30px;
+        background-color: $light-grey;
+        border-radius: 5px;
+        margin-left: 10px;
+        margin-bottom: 8px;
+        @include display-flex();
+        flex-flow: row nowrap;
+        align-content: center;
+        justify-content: flex-start;
+        padding: 5px 0px 5px 0px;
+        p {
+            margin: 0px 0px 0px 5px;
+            align-self: center;
+        }
+        input {
+            width: 430px;
+            border-radius: 5px;
+            border: 0;
+            font-size: 14px;
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+    &__comment {
+        width: 500px;
+        background-color: $light-grey;
+        border-radius: 5px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        @include display-flex();
+        flex-flow: column nowrap;
+        align-content: center;
+        justify-content: center;
+        textarea {
+            border-radius: 5px;
+            margin: 5px;
+            border: 0;
+            font-size: 14px;
+            height: 145px;
+            resize: none;
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+    &__icons {
+        width: 100%;
+        text-align: right;
+        button {
+            @include button-style();
+            height: 20px;
+            margin: 0px 0px 0px 10px;
+            i {
+                font-size: 20px;
+                color: black;
+                &:hover {
+
+                    color: $dark-grey;
+                }
+            }
+        }
+    }
+}
+//image jump panel
+#boxImageJump {
+    display: none;
+}
+//comment panel
+#boxComment {
+    display: none;
+}
+//------------------------------------------------- next and previous buttons and subtitles
+.mainSection__panel {
+    @include display-flex();
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    width: 600px;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $rose-mauve;
+}
+.panel__switchImgBtns {
+    @include display-flex();
+    flex-flow: row nowrap;
+    button {
+        @include button-style();
+        height: 20px;
+        margin: 0px 0px 0px 10px;
+        i {
+            font-size: 24px;
+            color: black;
+            &:hover {
+                color: $dark-grey;
+            }
+        }
+    }
+    
+}
+.mainSection__imageCount {
+    margin-left: 40px;
+    @include display-flex();
+    flex-flow: row nowrap;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+//------------------------------------------------- comments
+.commentSection{
+    width: 500px;
+    margin-bottom: 20px;
+    &__block {
+        border-left: 8px solid $dark-grey;
+        // border-top: 2px solid;
+        // border-bottom: 2px solid;
+        border-radius: 5px 0px 0px 5px;
+        padding-left: 5px;
+        margin-bottom: 5px;
+        margin-left: 40px;
+        display: none;
+    }
+    &__author {
+        padding: 5px 0 5px 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    &__comment {
+        font-size: 14px;
+        padding: 0 0 5px 10px;
+    }
+}
+//------------------------------------------------- media queries
+@media (max-width: 1150px) {
+    .mainSection {
+        flex-flow: column wrap;
+        max-width: 600px;
+        &__buttons {
+            // flex-flow: row wrap;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+    }
+}
+@media (max-width: 680px) {
+    .mainSection {
+        &__image {
+            height: 350px;
+        }
+        &__panel {
+            width: 470px;
+        }
+    }
+    .popUpBox {
+        width: 470px;
+        &__author {
+            width: 470px;
+            input {
+                width: 400px;
+            }
+        }
+        &__comment {
+            width: 470px;
+        }
+    }
+    .commentSection{
+        width: 470px;
+    }
+}
+@media (max-width: 540px) {
+    .mainSection {
+        &__image {
+            height: 240px;
+        }
+        &__panel {
+            width: 320px;
+        }
+        &__imageCount {
+            font-size: 10px;
+        }
+    }
+    .panel__description {
+        font-size: 14px;
+    }
+    .popUpBox {
+        width: 320px;
+        height: 128px;
+        &__img {
+            width: 42px;
+            height: 42px;
+        }
+        &__author {
+            width: 320px;
+            font-size: 14px;
+            input {
+                width: 258px;
+            }
+        }
+        &__comment {
+            width: 320px;
+        }
+    }
+    .commentSection{
+        width: 320px;
+    }
+}
+@media (max-width: 410px) {
+    .navbar {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        text-align: left;
+        padding-left: 10px;
+        &__text {
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+    }
+    .imageTitle {
+        padding-left: 10px;
+    }
+    .mainSection__image,
+    .mainSection__panel,
+    .mainSection__imageCount,
+    .mainSection__buttons {
+        margin-left: 10px;
+        padding-left: 0;
+    }
+    .mainSection__buttons button {
+        margin-left: 0;
+    }
+    .popUpBox {
+        margin-left: 0;
+        &__author,
+        &__comment {
+            margin-left: 0;
+        }
+    }
+    .commentSection h3 {
+        padding-left: 0;
+        margin-left: 10px;
+    }
+    .commentSection__block {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
