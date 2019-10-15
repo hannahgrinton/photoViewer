@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-jump',
   templateUrl: './jump.component.html',
   styleUrls: ['./jump.component.scss']
 })
-export class JumpComponent implements OnInit {
+export class JumpComponent {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  
 
 }

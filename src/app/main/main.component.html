@@ -1,3 +1,30 @@
-<p>
-  main works!
-</p>
+<header class="imageTitle" id="txtTitle"></header>
+<div class="mainSection">
+    <div>
+        <img class="mainSection__image" id="imgCenter" src="#" alt="image"/>
+        
+        <div class="mainSection__panel">
+            <div id="txtSubtitle" class="panel__description"></div>
+            <div class="panel__switchImgBtns">    
+                <button><i id="btnPrevious" class="fas fa-chevron-circle-left"></i></button>
+                <button><i id="btnNext" class="fas fa-chevron-circle-right"></i></button>
+            </div>
+        </div>
+        <div class="mainSection__imageCount">Image&nbsp;<div id="txtImageNum"></div>&nbsp;of&nbsp;<div id="txtImageTotal"></div></div>
+    </div>
+    <div class="mainSection__buttons">
+        <button><i id="icoJumpTo" class="fas fa-th-large"></i></button>
+        <!-- show jump panel here -->
+        <button><i id="icoOpenComment" class="far fa-comments"></i></button>
+        <!-- show comment panel here -->
+    </div>
+</div>
+<section class="commentSection">
+    <h3 class="imageTitle">Comments</h3>
+    <div id="comments"></div>
+    <div class="commentSection__block">
+        <h4 class="commentSection__author"></h4>
+        <div class="commentSection__comment"></div>
+    </div>
+</section>
+        
