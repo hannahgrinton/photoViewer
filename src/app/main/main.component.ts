@@ -10,7 +10,12 @@ export class MainComponent {
 
   public showJump:boolean = false;
   public showComment:boolean = false;
-  constructor(albumData:AlbumDataService) { }
+  constructor(public albumData:AlbumDataService) {}
 
-
+  public jumpButton():void {
+    this.showJump != this.showJump;
+  }
+  public commentButton():void {
+    this.showComment != this.showComment;
+  }
 }

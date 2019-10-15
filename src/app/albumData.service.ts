@@ -20,7 +20,7 @@ export class AlbumDataService {
                 this.photos = data.photos;
                 this.selected = this.photos[0];
                 this.loaded = true;
-                console.log("test: " + this.photos.length);
+                console.log(this.selected);
             },
             err => {
                 console.log("Error retrieving album data :(");

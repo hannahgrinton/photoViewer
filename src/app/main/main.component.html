@@ -13,9 +13,9 @@
         <div class="mainSection__imageCount">Image&nbsp;<div id="txtImageNum"></div>&nbsp;of&nbsp;<div id="txtImageTotal"></div></div>
     </div>
     <div class="mainSection__buttons">
-        <button><i id="icoJumpTo" class="fas fa-th-large" (click)="showJump = true"></i></button>
+        <button><i id="icoJumpTo" class="fas fa-th-large" (click)="jumpButton()"></i></button>
         <app-jump *ngIf="showJump == true"></app-jump>
-        <button><i id="icoOpenComment" class="far fa-comments" (click)="showComment = true"></i></button>
+        <button><i id="icoOpenComment" class="far fa-comments" (click)="commentButton()"></i></button>
         <app-comment *ngIf="showComment == true"></app-comment>
     </div>
 </div>
