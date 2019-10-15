@@ -42,7 +42,7 @@ export class AlbumDataService {
     }
     public disincrementImage():void {
         this.image--;
-        if (this.image > 0 ) {
+        if (this.image >= 0 ) {
             this.setPic();
         } else {
             this.image++;

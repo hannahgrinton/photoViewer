@@ -186,6 +186,12 @@
     }
     
 }
+.disabled {
+    cursor: default !important;
+    i {
+        color: $light-grey !important;
+    }
+}
 .mainSection__imageCount {
     margin-left: 40px;
     @include display-flex();
