@@ -156,14 +156,7 @@
         }
     }
 }
-//image jump panel
-#boxImageJump {
-    display: none;
-}
-//comment panel
-#boxComment {
-    display: none;
-}
+
 //------------------------------------------------- next and previous buttons and subtitles
 .mainSection__panel {
     @include display-flex();

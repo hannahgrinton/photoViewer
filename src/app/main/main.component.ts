@@ -13,9 +13,18 @@ export class MainComponent {
   constructor(public albumData:AlbumDataService) {}
 
   public jumpButton():void {
-    this.showJump != this.showJump;
+    if (this.showJump == false) {
+      this.showJump = true; 
+    } else {
+      this.showJump = false;
+    }
   }
   public commentButton():void {
-    this.showComment != this.showComment;
+    if (this.showComment == false) {
+      this.showComment = true;
+    } else {
+      this.showComment = false;
+    }
+    
   }
 }

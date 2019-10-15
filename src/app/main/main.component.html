@@ -21,10 +21,9 @@
 </div>
 <section class="commentSection">
     <h3 class="imageTitle">Comments</h3>
-    <div id="comments"></div>
-    <div class="commentSection__block">
-        <h4 class="commentSection__author"></h4>
-        <div class="commentSection__comment"></div>
+    <div class="commentSection__block" *ngFor="let comment of albumData.selected.comments">
+        <h4 class="commentSection__author">{{comment.author}}</h4>
+        <div class="commentSection__comment">{{comment.comments}}</div>
     </div>
 </section>
         
