@@ -27,4 +27,10 @@ export class MainComponent {
     }
     
   }
+  public nextImage():void {
+    this.albumData.incrementImage();
+  }
+  public previousImage():void {
+    this.albumData.disincrementImage();
+  }
 }

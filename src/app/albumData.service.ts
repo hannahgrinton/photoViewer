@@ -8,6 +8,7 @@ export class AlbumDataService {
     private loaded:boolean = false;
     public selected:Photo;
     private http:HttpClient;
+    public image = 0;
     constructor(myHttp:HttpClient) {
         this.http = myHttp;
     }
@@ -26,5 +27,26 @@ export class AlbumDataService {
                 console.log("Error retrieving album data :(");
             }
         );
+    }
+    private setPic():void {
+        this.selected = this.photos[this.image];
+    }
+    public incrementImage():void {
+        this.image++;
+        if (this.image <= this.photos.length) {
+            this.setPic();
+        } else {
+            this.image--;
+        }
+        
+    }
+    public disincrementImage():void {
+        this.image--;
+        if (this.image > 0 ) {
+            this.setPic();
+        } else {
+            this.image++;
+        }
+        
     }
 }
