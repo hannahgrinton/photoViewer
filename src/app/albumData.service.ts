@@ -16,16 +16,14 @@ export class AlbumDataService {
 
         this.http.get<JSONRoot>(this.RETRIEVE_SCRIPT).subscribe(
             data => {
-                //success!!
                 console.log(data);
                 this.photos = data.photos;
-                //target first sample in the array by default
                 this.selected = this.photos[0];
                 this.loaded = true;
                 console.log("test: " + this.photos.length);
             },
             err => {
-                console.log("Error retrieving portfolio data :(");
+                console.log("Error retrieving album data :(");
             }
         );
     }

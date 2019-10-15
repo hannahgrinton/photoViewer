@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { AlbumDataService } from './../albumData.service';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,9 @@ import { Component} from '@angular/core';
 })
 export class MainComponent {
 
-  constructor() { }
+  public showJump:boolean = false;
+  public showComment:boolean = false;
+  constructor(albumData:AlbumDataService) { }
 
 
 }
