@@ -1,1 +1,6 @@
-<div id="boxImageJump" class="popUpBox"></div><img class="popUpBox__img" src="#" alt="small image"/>
+<div id="boxImageJump" class="popUpBox" >
+    <div *ngFor="let image of albumData.photos">
+            <img class="popUpBox__img" src="assets/{{image.source}}" alt="small image"/>
+    </div>
+    
+</div>

@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { AlbumDataService } from '../albumData.service';
 
 @Component({
   selector: 'app-jump',
@@ -7,7 +8,7 @@ import { Component} from '@angular/core';
 })
 export class JumpComponent {
 
-  constructor() { }
+  constructor(public albumData:AlbumDataService) { }
 
   
 
