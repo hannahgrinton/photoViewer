@@ -16,7 +16,6 @@ export class JumpComponent {
     this.albumData.image = index;
     this.albumData.setPic();
     this.main.buttonWatch(this.albumData.image);
-
   }
 
   
