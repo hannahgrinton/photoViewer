@@ -18,9 +18,13 @@ html, body {
     bottom:0px;
     overflow: show;
     margin: auto;
-    background-color: $light-grey;
-    color: $rose-mauve;
-    display: block;
+    background-color: $rose-mauve;
+    color: $light-grey;
+    @include display-flex();
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
 }
 .noImages-overlay {
     position: fixed;
@@ -32,7 +36,7 @@ html, body {
     overflow: show;
     margin: auto;
     background-color: $light-grey;
-    display: none;
+    @include display-flex();
     flex-flow: column nowrap;
     align-content: center;
     justify-content: center;
@@ -43,6 +47,5 @@ html, body {
         font-size: 24px;
         color: $rose-mauve;
         align-self: center;
-        //display: none;
     }
 }

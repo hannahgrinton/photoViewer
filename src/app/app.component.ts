@@ -10,9 +10,9 @@ import { AlbumDataService } from './albumData.service';
 export class AppComponent implements OnInit {
   title = 'PhotoViewer';
 
+  //get things up and running
   constructor(public albumData:AlbumDataService) {}
   public ngOnInit():void {
-    console.log("initializing");
     this.albumData.load();
   }
 }
