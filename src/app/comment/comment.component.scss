@@ -1,1 +1,8 @@
 @import "../app.component.scss";
+
+.disabled {
+    cursor: default !important;
+    i {
+        color: $light-grey !important;
+    }
+}
