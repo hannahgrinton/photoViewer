@@ -33,20 +33,12 @@ export class AlbumDataService {
     }
     public incrementImage():void {
         this.image++;
-        if (this.image <= this.photos.length) {
-            this.setPic();
-        } else {
-            this.image--;
-        }
+        this.setPic();
         
     }
     public disincrementImage():void {
         this.image--;
-        if (this.image >= 0 ) {
-            this.setPic();
-        } else {
-            this.image++;
-        }
+        this.setPic();
         
     }
 }
