@@ -1,3 +1,4 @@
+<div *ngIf="!albumData.loaded" class="loading-overlay"><i class="fas fa-spinner fa-spin"></i></div>
 <div *ngIf="albumData.loaded;">
     <nav class="navbar">
       <h1 class="navbar__header">PhotoViewer 2.0&nbsp;<i class="fas fa-camera-retro"></i></h1>

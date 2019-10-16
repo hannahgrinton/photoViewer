@@ -1,12 +1,11 @@
-<div *ngIf="!albumData.loaded" class="loading-overlay"><div><i class="fas fa-spinner fa-spin"></i></div></div>
-<div *ngIf="albumData.photos.length > 0;">
+<div *ngIf="albumData.photos.length > 0">
     <header class="imageTitle" id="txtTitle">{{albumData.selected.title}}</header>
     <div class="mainSection">
         <div>
             <img class="mainSection__image" id="imgCenter" src="assets/{{albumData.selected.source}}" alt="image"/>
             
             <div class="mainSection__panel">
-                <div id="txtSubtitle" class="panel__description">{{albumData.selected.caption}}</div>
+                <div id="txtSubtitle" class="panel__description" [innerHTML]="albumData.selected.caption"></div>
                 <div class="panel__switchImgBtns">    
                     <button (click)="previousImage()" [disabled]="btnPrevious" [ngClass]="{'disabled' : btnPrevious}"><i id="btnPrevious" class="fas fa-chevron-circle-left"></i></button>
                     <button (click)="nextImage()" [disabled]="btnNext" [ngClass]="{'disabled' : btnNext}"><i id="btnNext" class="fas fa-chevron-circle-right"></i></button>
@@ -29,7 +28,6 @@
         </div>
     </section>
 </div>
-<div class="noImages-overlay" *ngIf="albumData.photos.length == 0;">
+<div class="noImages-overlay" *ngIf="albumData.photos.length == 0">
     <h1 class="noImages-overlay__header">No images to display</h1>
 </div>
-        

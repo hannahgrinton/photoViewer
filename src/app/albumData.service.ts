@@ -23,7 +23,12 @@ export class AlbumDataService {
             data => {
                 console.log(data);
                 this.photos = data.photos;
+
+                console.log("data received: " + this.loaded);
+
                 this.setPic();
+
+                
             },
             err => {
                 console.log("Error retrieving album data :(");
@@ -39,14 +44,23 @@ export class AlbumDataService {
             "comment": comment
         };
         let sendString = JSON.stringify(sendJSON);
-        this.http.post<string>(this.SEND_SCRIPT, sendString).subscribe();
-        this.load();
+        this.http.post<string>(this.SEND_SCRIPT, sendString).subscribe(
+            data => {
+                this.load();
+            },
+            err => {
+                console.log("Error adding album data :(");
+            }
+        );
+        
     }
     //--------------------------------------------------------------------------- page control
     public setPic():void {
         //image (index) will be 0 on first hit
         this.selected = this.photos[this.image];
         this.loaded = true;
+
+        console.log("setPic: " + this.loaded);
     }
     public incrementImage():void {
         this.image++;

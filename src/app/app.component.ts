@@ -13,6 +13,9 @@ export class AppComponent implements OnInit {
   //get things up and running
   constructor(public albumData:AlbumDataService) {}
   public ngOnInit():void {
+
+    console.log("ngOnInit: " + this.albumData.loaded);
+
     this.albumData.load();
   }
 }
