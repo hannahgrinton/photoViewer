@@ -1,6 +1,6 @@
 <div id="boxImageJump" class="popUpBox" >
-    <div *ngFor="let image of albumData.photos">
-            <img class="popUpBox__img" src="assets/{{image.source}}" alt="small image"/>
+    <div *ngFor="let image of albumData.photos; let i = index">
+        <img class="popUpBox__img" src="assets/{{image.source}}" alt="small image" [ngClass]="{'current' : image.id == albumData.selected.id}" (click)="jumpTo(i)"/>
     </div>
     
 </div>

@@ -86,9 +86,7 @@
             cursor: pointer;
         }
     }
-    .noHover {
-        pointer-events: none;
-    }
+    
     &__author {
         width: 500px;
         height: 30px;
@@ -186,12 +184,7 @@
     }
     
 }
-.disabled {
-    cursor: default !important;
-    i {
-        color: $light-grey !important;
-    }
-}
+
 .mainSection__imageCount {
     margin-left: 40px;
     @include display-flex();

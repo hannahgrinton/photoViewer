@@ -28,7 +28,7 @@ export class AlbumDataService {
             }
         );
     }
-    private setPic():void {
+    public setPic():void {
         this.selected = this.photos[this.image];
     }
     public incrementImage():void {

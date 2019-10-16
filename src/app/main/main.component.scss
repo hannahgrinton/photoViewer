@@ -1,1 +1,9 @@
 @import "../app.component.scss";
+
+//button disabling using ng-class
+.disabled {
+    cursor: default !important;
+    i {
+        color: $light-grey !important;
+    }
+}

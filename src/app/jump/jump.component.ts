@@ -8,7 +8,13 @@ import { AlbumDataService } from '../albumData.service';
 })
 export class JumpComponent {
 
+
   constructor(public albumData:AlbumDataService) { }
+
+  public jumpTo(index):void {
+    this.albumData.image = index;
+    this.albumData.setPic();
+  }
 
   
 
