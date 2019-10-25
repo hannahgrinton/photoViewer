@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JSONRoot, Photo } from './images.model';
+import { MainComponent } from './main/main.component';
 @Injectable() 
 export class AlbumDataService {
     //json urls

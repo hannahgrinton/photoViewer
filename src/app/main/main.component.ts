@@ -13,7 +13,9 @@ export class MainComponent {
   public btnNext:boolean = false;
   public btnPrevious:boolean = true;
   //this component controls the main section of the page - image shown, caption, etc
-  constructor(public albumData:AlbumDataService) {}
+  constructor(public albumData:AlbumDataService) {
+    this.buttonWatch(this.albumData.image);
+  }
 
   public jumpButton():void {
     //can we see the jump panel please?
