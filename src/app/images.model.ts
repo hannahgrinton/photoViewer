@@ -9,5 +9,9 @@ export interface Photo {
     title:    string;
     caption:  string;
     source:   string;
-    comments: any[];
+    comments: Comment[];
+}
+export interface Comment {
+    comment: string;
+    author: string;
 }
