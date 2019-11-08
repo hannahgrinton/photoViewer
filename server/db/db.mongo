@@ -1,7 +1,7 @@
 // target database
 use dbPhotos;
 // drop collection if already exists
-db.images.drop();
+db.photos.drop();
 // insert new documents into collection
 db.photos.insert([
     {

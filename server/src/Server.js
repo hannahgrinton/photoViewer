@@ -18,8 +18,6 @@ app.use(bodyParser.json());
 app.use(sanitizer());
 // express static middleware - setup static files location
 app.use(express.static('./dist'));
-
-
 app.get("/get", async (request, response) => {
     // construct MongoClient object for working with MongoDB
     let mongoClient = new MongoClient(URL, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -42,7 +40,6 @@ app.get("/get", async (request, response) => {
         throw error;
     }
 });
-
 app.put("/put/:id", async (request, response) => {
     // construct MongoClient object for working with MongoDB
     let mongoClient = new MongoClient(URL, { useNewUrlParser: true, useUnifiedTopology: true });
