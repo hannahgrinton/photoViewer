@@ -26,7 +26,7 @@ app.get("/get", async (request, response) => {
     // Use connect method to connect to the server
     try {
         await mongoClient.connect(); 
-        // convert all documents in technologies collection into array in one awesome statement!
+        // convert all documents in photos collection into array
         let photoArray = await mongoClient.db(DB_NAME).collection("photos").find().toArray();
         // close mongoClient (connection to MongoDB server)
         mongoClient.close();
