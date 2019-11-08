@@ -10,44 +10,8 @@ db.photos.insert([
         "source": "100_1245.jpg",
         "comments": [
             {
-                "comment": "this a long sentencethis a long sentencethis a long sentencethis a long sentencethis a long sentencethis a long sentencethis a long sentence",
-                "author": "this a long sentencethis a lon"
-            },
-            {
-                "comment": "sean tested this",
-                "author": "sean"
-            },
-            {
-                "comment": "ddd",
-                "author": "ddd"
-            },
-            {
-                "comment": "ccc",
-                "author": "ccc"
-            },
-            {
-                "comment": "bbb",
-                "author": "bbb"
-            },
-            {
-                "comment": "aaa",
-                "author": "aaa"
-            },
-            {
-                "comment": "test",
-                "author": "test"
-            },
-            {
                 "comment": "With the lights out, it's less dangerous\nHere we are now, entertain us\nI feel stupid and contagious\nHere we are now, entertain us\nA mulatto, an albino, a mosquito, my libido\nYeah, hey",
                 "author": "Kurt Cobain"
-            },
-            {
-                "comment": "Howdy!",
-                "author": "Hannah"
-            },
-            {
-                "comment": "Bonjour ",
-                "author": "Une Personne"
             },
             {
                 "comment": "This is a test comment!",
@@ -93,7 +57,7 @@ db.photos.insert([
             },
             {
                 "comment": "If I wasn't broke, ooh\nWould you spend more time with me like you said you'd do? Oh yeah\nTell me what I'm supposed to do\n'Cause the only thing I need is to be loved by you",
-                "author": "Random Dude"
+                "author": "Samm Henshaw"
             }
         ]
     },
@@ -102,10 +66,6 @@ db.photos.insert([
         "caption": "Portaging in algonquin park, Ontario, July 2004",
         "source": "IMG_6087.jpg",
         "comments": [
-            {
-                "comment": "test",
-                "author": "test"
-            },
             {
                 "comment": "Hello out there, we're on the air. It's hockey night tonight!",
                 "author": "Someone..."
@@ -144,10 +104,6 @@ db.photos.insert([
         "source": "image6.jpg",
         "comments": [
             {
-                "comment": "sean",
-                "author": "sean"
-            },
-            {
                 "comment": "Crying, crying over you\nIntensify security\nBreak the chains that hold me down\nNo chance for sanity around here\nCause I ain't gonna be your fool no more",
                 "author": "Platinum Blonde"
             }
@@ -158,10 +114,6 @@ db.photos.insert([
         "caption": "Darcy at age 2",
         "source": "image7.jpg",
         "comments": [
-            {
-                "comment": "test",
-                "author": "test"
-            },
             {
                 "comment": "Test",
                 "author": "Test"
@@ -193,10 +145,6 @@ db.photos.insert([
             {
                 "comment": "test",
                 "author": "test"
-            },
-            {
-                "comment": "Testing",
-                "author": "Test"
             }
         ]
     }

@@ -40,19 +40,20 @@ app.get("/get", async (request, response) => {
         throw error;
     }
 });
-app.put("/put/:id", async (request, response) => {
+app.put("/add", async (request, response) => {
     // construct MongoClient object for working with MongoDB
     let mongoClient = new MongoClient(URL, { useNewUrlParser: true, useUnifiedTopology: true });
     // Use connect method to connect to the server
     try {
         await mongoClient.connect(); 
         let photoCollection = mongoClient.db(DB_NAME).collection("photos");
-        let id = objectId(request.params.id);
         //sanitize incoming json
-        request.body.author = request.sanitize(request.body.author);
-        request.body.comment = request.sanitize(request.body.comment);
+        let mycomment = request.sanitize(request.body.comment);
+        let myauthor = request.sanitize(request.body.author);
+        let id = objectId(request.body.photoId);
         let selector = {"_id" : id};
-        let newValue = { $set : {"author":request.body.author, "comment":request.body.comment}};
+        let newValue = { $push : {"comments": {"comment": mycomment, "author": myauthor}}};
+        //console.log("recieved: " + mycomment + " " + myauthor + " " + request.body.photoId);
         //add the updated doc into mongodb
         let result = await photoCollection.updateOne(selector, newValue);
         mongoClient.close();
