@@ -42,12 +42,13 @@ export class AlbumDataService {
         //send data to api and reload page
         this.loaded = false;
         let sendJSON = {
-            "photoId": this.photos[this.image].id, 
+            "photoId": this.photos[this.image]._id, 
             "author": author,
             "comment": comment
         };
-        let sendString = JSON.stringify(sendJSON);
-        this.http.post<string>(this.SEND_SCRIPT, sendString).subscribe(
+        //let sendString = JSON.stringify(sendJSON);
+        console.log("sending to: " + this.photos[this.image]._id + "image number from list: " + this.image);
+        this.http.put<string>(this.SEND_SCRIPT, sendJSON).subscribe(
             data => {
                 this.load();
             },

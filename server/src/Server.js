@@ -29,6 +29,9 @@ app.get("/get", async (request, response) => {
         // close mongoClient (connection to MongoDB server)
         mongoClient.close();
         let json = { "photos": photoArray };
+        json.photos.forEach(photo => {
+            photo.comments.reverse();
+        });
         //set status code to 200 as per restful requirements
         response.status(200);
         // serializes sampleJSON to string format
@@ -48,12 +51,13 @@ app.put("/add", async (request, response) => {
         await mongoClient.connect(); 
         let photoCollection = mongoClient.db(DB_NAME).collection("photos");
         //sanitize incoming json
+        console.log("received: " + request.body.photoId + " " + request.body.author + " " + request.body.comment);
         let mycomment = request.sanitize(request.body.comment);
         let myauthor = request.sanitize(request.body.author);
         let id = objectId(request.body.photoId);
         let selector = {"_id" : id};
         let newValue = { $push : {"comments": {"comment": mycomment, "author": myauthor}}};
-        //console.log("recieved: " + mycomment + " " + myauthor + " " + request.body.photoId);
+        console.log("recieved: " + mycomment + " " + myauthor + " " + request.body.photoId);
         //add the updated doc into mongodb
         let result = await photoCollection.updateOne(selector, newValue);
         mongoClient.close();
