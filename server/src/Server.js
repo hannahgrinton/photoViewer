@@ -6,7 +6,7 @@ let sanitizer = require("express-sanitizer"); //npm install expess-sanitizer --s
 let objectId = require("mongodb").ObjectID;
 // MongoDB constants
 const URL = "mongodb://localhost:27017/";
-const DB_NAME = "dbTechs";
+const DB_NAME = "dbPhotos";
 
 // construct application object via express
 let app = express();
@@ -27,10 +27,10 @@ app.get("/get", async (request, response) => {
     try {
         await mongoClient.connect(); 
         // convert all documents in technologies collection into array in one awesome statement!
-        let techArray = await mongoClient.db(DB_NAME).collection("technologies").find().sort("name",1).toArray();
+        let photoArray = await mongoClient.db(DB_NAME).collection("photos").find().sort("name",1).toArray();
         // close mongoClient (connection to MongoDB server)
         mongoClient.close();
-        let json = { "technologies": techArray };
+        let json = { "photos": photoArray };
         //set status code to 200 as per restful requirements
         response.status(200);
         // serializes sampleJSON to string format

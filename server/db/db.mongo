@@ -1,0 +1,214 @@
+// target database
+use dbPhotos;
+// drop collection if already exists
+db.images.drop();
+// insert new documents into collection
+db.photos.insert([
+    {
+        "id": "1",
+        "title": "On the Beach",
+        "caption": "On the beach on the labour day weekend.  September 2005",
+        "source": "100_1245.jpg",
+        "comments": [
+            {
+                "comment": "this a long sentencethis a long sentencethis a long sentencethis a long sentencethis a long sentencethis a long sentencethis a long sentence",
+                "author": "this a long sentencethis a lon"
+            },
+            {
+                "comment": "sean tested this",
+                "author": "sean"
+            },
+            {
+                "comment": "ddd",
+                "author": "ddd"
+            },
+            {
+                "comment": "ccc",
+                "author": "ccc"
+            },
+            {
+                "comment": "bbb",
+                "author": "bbb"
+            },
+            {
+                "comment": "aaa",
+                "author": "aaa"
+            },
+            {
+                "comment": "test",
+                "author": "test"
+            },
+            {
+                "comment": "With the lights out, it's less dangerous\nHere we are now, entertain us\nI feel stupid and contagious\nHere we are now, entertain us\nA mulatto, an albino, a mosquito, my libido\nYeah, hey",
+                "author": "Kurt Cobain"
+            },
+            {
+                "comment": "Howdy!",
+                "author": "Hannah"
+            },
+            {
+                "comment": "Bonjour ",
+                "author": "Une Personne"
+            },
+            {
+                "comment": "This is a test comment!",
+                "author": "Hannah"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "My Little nephew",
+        "caption": "Clowning around at my cousin's wedding reception",
+        "source": "IMG_0258.jpg",
+        "comments": [
+            {
+                "comment": "Not quite a year since she went away, Rosanna, yeah\nNow she's gone and I have to say\nMeet you all the way, meet you all the way\nMeet you all the way, meet you all the way, Rosanna, yeah",
+                "author": "Toto"
+            },
+            {
+                "comment": "Bond. James Bond.",
+                "author": "James Bond"
+            },
+            {
+                "comment": "You're not dying, you just can't think of anything good to do.",
+                "author": "Ferris Bueller"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Bugs bugs bugs",
+        "caption": "Befriending bugs",
+        "source": "IMG_6085.jpg",
+        "comments": [
+            {
+                "comment": "test",
+                "author": "test"
+            },
+            {
+                "comment": "I'm going to have so many darn comments on this site by the time I'm finished",
+                "author": "Test"
+            },
+            {
+                "comment": "Banana",
+                "author": "Hannah"
+            },
+            {
+                "comment": "If I wasn't broke, ooh\nWould you spend more time with me like you said you'd do? Oh yeah\nTell me what I'm supposed to do\n'Cause the only thing I need is to be loved by you",
+                "author": "Random Dude"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Portage it!",
+        "caption": "Portaging in algonquin park, Ontario, July 2004",
+        "source": "IMG_6087.jpg",
+        "comments": [
+            {
+                "comment": "test",
+                "author": "test"
+            },
+            {
+                "comment": "Hello out there, we're on the air. It's hockey night tonight!",
+                "author": "Someone..."
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Dance Moves",
+        "caption": "Showing off the skills from the latest hip hop dance lesson",
+        "source": "HPIM0259.jpg",
+        "comments": [
+            {
+                "comment": "one two three",
+                "author": "testing"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "title": "The Cat",
+        "caption": "Get off my damn chair!",
+        "source": "cat.jpg",
+        "comments": [
+            {
+                "comment": "woof woof some more",
+                "author": "also my dog"
+            },
+            {
+                "comment": "woof",
+                "author": "My Dog"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "title": "De-weeding the barn",
+        "caption": "Removing the &quot;decorative ivy&quot; from our newly purchased barn.",
+        "source": "image6.jpg",
+        "comments": [
+            {
+                "comment": "sean",
+                "author": "sean"
+            },
+            {
+                "comment": "Crying, crying over you\nIntensify security\nBreak the chains that hold me down\nNo chance for sanity around here\nCause I ain't gonna be your fool no more",
+                "author": "Platinum Blonde"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "title": "Darcy in the weeds",
+        "caption": "Darcy at age 2",
+        "source": "image7.jpg",
+        "comments": [
+            {
+                "comment": "test",
+                "author": "test"
+            },
+            {
+                "comment": "Test",
+                "author": "Test"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "title": "Lego Star Destroyer",
+        "caption": "Best. Gift. Ever.",
+        "source": "starDestroyer.jpg",
+        "comments": [
+            {
+                "comment": "test",
+                "author": "test"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "title": "Darcy at the beach",
+        "caption": "Darcy at the beach",
+        "source": "image8.jpg",
+        "comments": []
+    },
+    {
+        "id": "15",
+        "title": "Web Student Wellness!",
+        "caption": "Web student wellness in 2009",
+        "source": "wellness01.jpg",
+        "comments": [
+            {
+                "comment": "test",
+                "author": "test"
+            },
+            {
+                "comment": "Testing",
+                "author": "Test"
+            }
+        ]
+    }
+]);
