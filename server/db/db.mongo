@@ -5,7 +5,6 @@ db.images.drop();
 // insert new documents into collection
 db.photos.insert([
     {
-        "id": "1",
         "title": "On the Beach",
         "caption": "On the beach on the labour day weekend.  September 2005",
         "source": "100_1245.jpg",
@@ -57,7 +56,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "2",
         "title": "My Little nephew",
         "caption": "Clowning around at my cousin's wedding reception",
         "source": "IMG_0258.jpg",
@@ -77,7 +75,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "3",
         "title": "Bugs bugs bugs",
         "caption": "Befriending bugs",
         "source": "IMG_6085.jpg",
@@ -101,7 +98,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "4",
         "title": "Portage it!",
         "caption": "Portaging in algonquin park, Ontario, July 2004",
         "source": "IMG_6087.jpg",
@@ -117,7 +113,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "5",
         "title": "Dance Moves",
         "caption": "Showing off the skills from the latest hip hop dance lesson",
         "source": "HPIM0259.jpg",
@@ -129,7 +124,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "6",
         "title": "The Cat",
         "caption": "Get off my damn chair!",
         "source": "cat.jpg",
@@ -145,7 +139,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "7",
         "title": "De-weeding the barn",
         "caption": "Removing the &quot;decorative ivy&quot; from our newly purchased barn.",
         "source": "image6.jpg",
@@ -161,7 +154,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "10",
         "title": "Darcy in the weeds",
         "caption": "Darcy at age 2",
         "source": "image7.jpg",
@@ -177,7 +169,6 @@ db.photos.insert([
         ]
     },
     {
-        "id": "11",
         "title": "Lego Star Destroyer",
         "caption": "Best. Gift. Ever.",
         "source": "starDestroyer.jpg",
@@ -189,14 +180,12 @@ db.photos.insert([
         ]
     },
     {
-        "id": "14",
         "title": "Darcy at the beach",
         "caption": "Darcy at the beach",
         "source": "image8.jpg",
         "comments": []
     },
     {
-        "id": "15",
         "title": "Web Student Wellness!",
         "caption": "Web student wellness in 2009",
         "source": "wellness01.jpg",

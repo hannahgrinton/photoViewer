@@ -5,7 +5,8 @@ import { MainComponent } from './main/main.component';
 @Injectable() 
 export class AlbumDataService {
     //json urls
-    private readonly RETRIEVE_SCRIPT  = "http://www.seanmorrow.ca/_lessons/retrieveAlbum.php?id=w0420634&count=11";
+    // private readonly RETRIEVE_SCRIPT  = "http://www.seanmorrow.ca/_lessons/retrieveAlbum.php?id=w0420634&count=11";
+    private readonly RETRIEVE_SCRIPT  = "http://localhost:8080/get";
     private readonly SEND_SCRIPT = "http://www.seanmorrow.ca/_lessons/addComment.php?id=w0420634";
     //controlling data
     public photos:Photo[];
